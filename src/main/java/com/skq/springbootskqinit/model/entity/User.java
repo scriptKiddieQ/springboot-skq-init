@@ -1,0 +1,67 @@
+package com.skq.springbootskqinit.model.entity;
+
+import com.baomidou.mybatisplus.annotation.*;
+
+import java.util.Date;
+import lombok.Data;
+
+/**
+ * 用户
+ * @TableName user
+ */
+@TableName(value ="user")
+@Data
+public class User {
+    /**
+     * id
+     */
+    @TableId(type = IdType.ASSIGN_ID)   // 改用雪花算法生成 ID
+    private Long id;
+
+    /**
+     * 账号
+     */
+    private String userAccount;
+
+    /**
+     * 密码
+     */
+    private String userPassword;
+
+    /**
+     * 用户昵称
+     */
+    private String userName;
+
+    /**
+     * 用户头像
+     */
+    private String userAvatar;
+
+    /**
+     * 用户简介
+     */
+    private String userProfile;
+
+    /**
+     * 用户角色：user/admin/ban
+     */
+    private String userRole;
+
+    /**
+     * 创建时间
+     */
+    private Date createTime;
+
+    /**
+     * 更新时间
+     */
+    private Date updateTime;
+
+    /**
+     * 是否删除
+     */
+    // https://baomidou.com/reference/annotation/#tableid
+    @TableLogic   // 逻辑删除
+    private Integer isDelete;
+}

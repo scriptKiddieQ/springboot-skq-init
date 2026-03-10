@@ -1,7 +1,7 @@
 ## SpringBoot 项目初始化模板
 ### 1.技术选型
 - jdk21 + SpringBoot 3.5.11
-
+- MyBatis Plus 3.5.15
 ## 快速上手
 
 ### MySQL 数据库

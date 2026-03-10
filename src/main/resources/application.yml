@@ -19,9 +19,20 @@ server:
     session:
       cookie:
         max-age: 2592000
-  # swagger-ui custom path
-#springdoc:
-
+  #MyBatis Plus ??
+mybatis-plus:
+  configuration:
+    # MyBatis ??
+    map-underscore-to-camel-case: false
+    # ??????????
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # ????
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1 # ?????
+      logic-not-delete-value: 0
+    enable-sql-runner: true
 # Knife 4j ??????
 knife4j:
   enable: true
